@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="styles.css"/>
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<script>
+		
+		let taskData = window.location.search;
+		taskData = taskData.replace('?task=','');
+		taskData = taskData.replace('sched=','');
+		taskData = taskData.split('&');
+		
+
+		let qtdtask = parseInt(taskData[0]);
+		let qtdsched = parseInt(taskData[1]);
+		
+		console.log(qtdtask);
+		console.log(qtdsched);
+		
+	</script>
+</body>
+</html>
