@@ -18,7 +18,7 @@ function getInput() {
 	taskData = taskData.split('&');
 	let qtdtask = parseInt(taskData[0]);
 	let qtdsched = parseInt(taskData[1]);	
-	return [qtdsched,qtdsched];
+	return [qtdtask, qtdsched];
 }
 
 //Cria a tabela de tarefas
@@ -26,20 +26,20 @@ function createTable(qtdtask,qtdsched) {
 	let table = document.getElementById('tableTask');
 	let row = table.insertRow(0);
 	let cell = row.insertCell(0);
-	cell.style.backgroundColor = 'rgba(0,191,255,1)';
+	cell.style.backgroundColor = 'rgba(25,120,255,1)';
 	for(let i = 1;i < qtdsched + 1;i++){
 		let cell = row.insertCell(i);
-		cell.style.backgroundColor = 'rgba(0,191,255,1)';
+		cell.style.backgroundColor = 'rgba(25,120,255,1)';
 		cell.innerHTML = `<strong>${i}ºHorário</strong>`;
 	}
-			
-	for(let i = 1;i < qtdsched + 1;i++){
+	
+	for(let i = 1;i < qtdtask + 1;i++){
 		row = table.insertRow(i);
-		for(let j = 0;j < qtdtask + 1;j++){
+		for(let j = 0;j < qtdsched + 1;j++){
 			let cell = row.insertCell(j);
 			if(j == 0){
 				cell.innerHTML = `<input type="text" placeholder="Tarefa ${i}"></input>`;
-				cell.style.backgroundColor = 'rgba(0,191,255,1)';
+				cell.style.backgroundColor = 'rgba(25,120,255,1)';
 			}	
 			else{
 				cell.style.backgroundColor = 'white';
@@ -90,4 +90,9 @@ function animationSetup(){
 			//$(this).css("background-color", "blue");
 		}
 	});
+}
+
+function intervalScheduling() {
+	$("td").off( "mouseenter mouseleave" );
+	$("td").off( "click" );
 }
