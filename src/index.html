@@ -37,9 +37,8 @@
 		function submitTask() {
 			let qtdtask = document.getElementById('qtdtask').value;
 			let qtdsched = document.getElementById('qtdsched').value;
-			let obj = {task: qtdtask,sched: qtdsched};
 
-			window.location.href = `tabela_tarefas.html?task=${qtdtask}&sched=${qtdsched}`;
+			window.location.href = `tabela_tarefas.html?${qtdtask}&${qtdsched}`;
 		}
 	</script>
 </body>
