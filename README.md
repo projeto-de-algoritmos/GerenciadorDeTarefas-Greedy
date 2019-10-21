@@ -11,7 +11,6 @@
 
 ## Sobre 
 O objetivo do projeto é selecionar um conjunto máximo de tarefas compatíveis a partir das tarefas inseridas pelo usuário.
-O usuário inicialmente informa a quantidade de tarefas e a quantidade de horários disponíveis para realização das tarefas.Em seguida o usuário deve selecionar, a partir de uma tabela, os horários desejados para realização de cada tarefa. Por fim, o usuário deve clicar no botão xxxxx para que seja encontrado o conjunto máximo de tarefas compatíveis e retornado na interface esse conjunto.
 
 **Algoritmo utilizado:**
 Versão gulosa do Interval scheduling.
@@ -24,7 +23,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+O usuário inicialmente informa a quantidade de tarefas e a quantidade de horários disponíveis para realização das tarefas. Em seguida o usuário deve selecionar, a partir de uma tabela, os horários desejados para realização de cada tarefa. Por fim, o usuário deve clicar no botão xxxxx para que seja encontrado o conjunto máximo de tarefas compatíveis e assim é retornado na interface esse conjunto.
 
 ## Outros 
 **Referências:**
