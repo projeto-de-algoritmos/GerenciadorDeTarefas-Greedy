@@ -1,13 +1,10 @@
 let taskDuration = [];
-let taskTable = [];
+let tableCells = [];
 
-function inicializeArrays(qtdtask, qtdsched) {
+function inicializeArrays(qtdtask) {
   for (let i = 0; i < qtdtask; i++) {
-    taskTable[i] = [];
+    tableCells[i] = [];
     taskDuration[i] = { duration: 0, startAt: null };
-    for (let j = 0; j < qtdsched; j++) {
-      taskTable[i][j] = false;
-    }
   }
 }
 
@@ -41,6 +38,7 @@ function createTable(qtdtask, qtdsched) {
         cell.innerHTML = `<input type="text" placeholder="Tarefa ${i}"></input>`;
         cell.style.backgroundColor = "rgba(25,120,255,1)";
       } else {
+     	tableCells[i-1][j-1] = cell;
         cell.style.backgroundColor = "white";
       }
     }
@@ -85,14 +83,17 @@ function animationSetup() {
 
       taskDuration[coordx - 1].duration++;
       if (
-        taskDuration[coordx - 1].startAt === undefined ||
+   		taskDuration[coordx - 1].startAt === undefined ||
         taskDuration[coordx - 1].startAt === null
       ) {
         taskDuration[coordx - 1].startAt = coordy - 1;
       }
+      else{
+      	if(taskDuration[coordx - 1].startAt > (coordy -1)){
+      		taskDuration[coordx - 1].startAt = coordy - 1;
+      	}	
+      }
 
-      taskTable[coordx - 1][coordy - 1] = true;
-      console.log(taskDuration);
       //$(this).css("background-color", "blue");
     }
   });
@@ -133,4 +134,11 @@ function intervalScheduling() {
   paintSelectedJobs(jobsSelected);
 }
 
-function paintSelectedJobs(selectedJobs) {}
+function paintSelectedJobs(selectedJobs){
+	
+	selectedJobs.forEach((task) => {
+		for(let j = task.s;j <= task.f;j++){
+			tableCells[task.i][j].style.backgroundColor = 'red';
+		}
+	});
+}
