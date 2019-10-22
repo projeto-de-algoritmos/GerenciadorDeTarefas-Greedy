@@ -138,7 +138,7 @@ function paintSelectedJobs(selectedJobs){
 	
 	selectedJobs.forEach((task) => {
 		for(let j = task.s;j <= task.f;j++){
-			tableCells[task.i][j].style.backgroundColor = 'red';
+			tableCells[task.i][j].style.backgroundColor = 'rgb(0,255,127)';
 		}
 	});
 }
