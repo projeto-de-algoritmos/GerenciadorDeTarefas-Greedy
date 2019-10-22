@@ -16,7 +16,7 @@ O objetivo do projeto é selecionar um conjunto máximo de tarefas compatíveis 
 Versão gulosa do Interval scheduling.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![](demonstraçao.gif)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
