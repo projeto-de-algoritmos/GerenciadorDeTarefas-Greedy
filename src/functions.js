@@ -93,8 +93,6 @@ function animationSetup() {
       		taskDuration[coordx - 1].startAt = coordy - 1;
       	}	
       }
-
-      //$(this).css("background-color", "blue");
     }
   });
 }
@@ -135,8 +133,10 @@ function intervalScheduling() {
 }
 
 function paintSelectedJobs(selectedJobs){
+	$("td").off( "mouseenter mouseleave" );
+  $("td").off( "click" );
 	
-	selectedJobs.forEach((task) => {
+  selectedJobs.forEach((task) => {
 		for(let j = task.s;j <= task.f;j++){
 			tableCells[task.i][j].style.backgroundColor = 'rgb(0,255,127)';
 		}
