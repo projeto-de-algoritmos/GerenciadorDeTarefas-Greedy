@@ -20,17 +20,16 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+O projeto pode ser executado a partir dos navegadores google chrome ou mozilla firefox. Passos para execução:
+1) Clone do projeto: git clone git@github.com:projeto-de-algoritmos/Greedy-GerenciadorDeTarefas.git
+2) Abrir o arquivo index.html,contido dentro da pasta 'src', pelo navegador.
 
 ## Uso 
-O usuário inicialmente informa a quantidade de tarefas e a quantidade de horários disponíveis para realização das tarefas. Em seguida o usuário deve selecionar, a partir de uma tabela, os horários desejados para realização de cada tarefa. Por fim, o usuário deve clicar no botão xxxxx para que seja encontrado o conjunto máximo de tarefas compatíveis e assim é retornado na interface esse conjunto.
+1) O usuário inicialmente informa a quantidade de tarefas e a quantidade de horários disponíveis para realização das tarefas.
+2) Em seguida o usuário deve selecionar, a partir de uma tabela, os horários desejados para realização de cada tarefa. 
+3) Por fim, o usuário deve clicar no botão 'Enviar' para que seja encontrado o conjunto máximo de tarefas compatíveis e assim é retornado na interface esse conjunto.
 
 ## Outros 
 **Referências:**
 http://www.each.usp.br/digiampietri/SIN5013/13-algoritmosGulosos.pdf
-
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
 
